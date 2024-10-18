@@ -65,7 +65,7 @@ async def main():
     print("AZURE_RESOURCE_GROUP=", azure_resource_group)
     print("AZUREAI_PROJECT_NAME=", azure_project_name)
 
-    valid_locations = ["eastus2", "francecentral", "uksouth", "swedencentral"]
+    valid_locations = ["eastus2", "francecentral", "uksouth", "swedencentral", "northcentralus"]
 
     if azure_location not in valid_locations:
         print(f"Invalid AZURE_LOCATION: {azure_location}. Must be one of {valid_locations}.")
