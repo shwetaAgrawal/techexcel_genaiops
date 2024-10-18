@@ -164,6 +164,8 @@ runs:
 
           # Checking if the resource group exists
           export AZURE_RESOURCE_GROUP=$(azd env get-values -e ${{ inputs.AZURE_ENV_NAME }} | grep AZURE_RESOURCE_GROUP | cut -d'=' -f2 | tr -d '"' || true)
+          echo "🔶 | Resource group from environment: $AZURE_RESOURCE_GROUP"
+          echo $AZURE_RESOURCE_GROUP
           if [ -z "$AZURE_RESOURCE_GROUP" ]; then
             resource_group_exist=false
           else
